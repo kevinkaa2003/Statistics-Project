@@ -1,0 +1,8 @@
+.mainplotcontainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+.plotoptions {
+    margin-left: 0%;
+}

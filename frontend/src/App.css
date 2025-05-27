@@ -1,0 +1,32 @@
+/* Ensure the whole page is styled consistently */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: beige;
+}
+
+/* Style for the main container */
+.maincontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  height: 100vh;
+  
+}
+
+/* File Interaction Component on the left */
+.fileinteraction {
+  width: 35%;
+  height: 100%;
+}
+
+/* 3D Environment Component on the right */
+.threedenvironment {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 100px;
+  
+}
