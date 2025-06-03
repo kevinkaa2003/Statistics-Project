@@ -1,19 +1,12 @@
 import './App.css';
 import React, { useEffect, useState, createContext, useContext } from 'react';
-//Packages
-import axios from 'axios'; //Backend Communication
-import Papa from 'papaparse'; //CSV Reading
-//Components 
 import FileInteractionComponent from './FileInteraction.js';
 import ThreeDEnvironment from './3DEnvironment.js';
 import Navbar from './StatisticsNavbar.js';
-
 import { DataProvider } from './DataProvider.js';
 
 
-function App() { 
-  
-
+function App() {
 
   return (
     <>
@@ -26,16 +19,12 @@ function App() {
         <div className='fileinteraction'>
           <FileInteractionComponent/>
         </div>
-        
+
         <div className='threedenvironment'>
           <ThreeDEnvironment/>
         </div>
-      
-         
     </div>
     </DataProvider>
-    
- 
     </>
   )
 }
@@ -43,5 +32,3 @@ function App() {
 
 
 export default App;
-
-

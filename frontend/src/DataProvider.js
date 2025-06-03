@@ -5,7 +5,7 @@ export const DataContext = createContext();
 
 //Create Provider Element
 export const DataProvider = ({children}) => {
-    //Store Data from File Intereaction Component in Global Variable 
+    //Store Data from File Intereaction Component in Global Variable
     const [globalGraphData, setGlobalGraphData] = useState();
 
 
@@ -18,7 +18,7 @@ export const DataProvider = ({children}) => {
     const [jData, setJData] = useState();
     const [kData, setKData] = useState();
 
-      
+
     //Variables to Store Selected Columns for Graph (CREATE EXPAND FEATURE)
     const [selectedColumnNameX, setSelectedColumnNameX] = useState("");
     const [selectedColumnNameY, setSelectedColumnNameY] = useState("");
@@ -28,14 +28,14 @@ export const DataProvider = ({children}) => {
     //Data Indices Variable Storage
     const [dataIndices, setDataIndices] = useState();
 
-    
+
     //Store Data in Global Variable
     const globalGraphDataStates = {
 
         //Global Graph Data
         globalGraphData,
         setGlobalGraphData,
-        
+
         //Data Indices
         dataIndices,
         setDataIndices,
@@ -64,15 +64,10 @@ export const DataProvider = ({children}) => {
         selectedColumnNameZ,
         setSelectedColumnNameZ,
 
-
-        
     }
-
 
     return (<DataContext.Provider value ={globalGraphDataStates}>{/*Pass States to Children*/}
                 {children}
             </DataContext.Provider>
-    );  
+    );
 };
-
-

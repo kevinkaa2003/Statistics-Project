@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './StatisticsNavbar.css';
 
+//Navbar component
 const Navbar = () => {
-
+    //Declare variables
     const[isInputFocused, setIsInputFocused] = useState(false);
     const searchBar = document.getElementById('searchbar');
     const searchResultsDiv = document.getElementById('search-results');
@@ -31,13 +32,10 @@ const Navbar = () => {
         };
 
         //Hide All Dropdowns Initially
-
         hideDropdown(dropdownHistory);
         hideDropdown(dropdownGoals);
 
         //Event Listeners for Headers
-
-
         history.addEventListener('mouseenter', function () {
             showDropdown(dropdownHistory);
         });
@@ -57,7 +55,7 @@ const Navbar = () => {
 
         return function() {
 
-
+            //Add event listeners
             history.removeEventListener('mouseenter', showDropdown);
             history.removeEventListener('mouseleave', hideDropdown);
 
@@ -67,9 +65,9 @@ const Navbar = () => {
 
     });
 
-    return ( 
+    return (
 
-        <> 
+        <>
         <div className="navbar">
             <a href=""><img src="" style={{verticalAlign: 'middle'}}/></a>{/*Logo or Header Image*/}
             <div className="dropdownproducts">
@@ -79,14 +77,14 @@ const Navbar = () => {
             <div className= 'navright'>
                 <div className="dropdownabout">
                     <strong>ABOUT</strong>
-                    <div className="dropdown-content-about"> 
+                    <div className="dropdown-content-about">
                         <br/>
                         <br/>
                         <br/>
                         <br/>
-                        <div className="history">History</div> 
+                        <div className="history">History</div>
                             <div className="dropdownhistory">
-                                <strong>Founded by a solo developer in 2024, Summit Graphing is in its infancy and will continue to be developed throughout the years to improve performance while also adding additional features.</strong> 
+                                <strong>Founded by a solo developer in 2024, Summit Graphing is in its infancy and will continue to be developed throughout the years to improve performance while also adding additional features.</strong>
                             </div>
                         <br/>
                         <br/>
@@ -96,7 +94,7 @@ const Navbar = () => {
                             <div className="dropdowngoals">
                                 <strong>
                                     Our Goals as a company are as follows:
-                                    <br/> 
+                                    <br/>
                                     <br/>
                                 <ul>
                                     <li>
@@ -118,7 +116,7 @@ const Navbar = () => {
                                     <li>
                                         Listen to feedback from our users to help improve our product for the future.
                                     </li>
-                                </ul> 
+                                </ul>
                                 </strong>
                             </div>
                         </div>
@@ -141,6 +139,5 @@ const Navbar = () => {
 
      );
 }
- 
-export default Navbar;
 
+export default Navbar;
